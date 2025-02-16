@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's FLAMES</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Decorations using inline SVG (Hearts & Full Brown Teddy Bears) -->
+  <div id="decorations">
+    <div class="decor" style="top: 20px; left: 20px;">
+      <!-- Heart SVG -->
+      <svg viewBox="0 0 32 29.6" width="50" height="50">
+        <path d="M23.6,0c-3.3,0-6.3,1.7-8,4.3C13.7,1.7,10.7,0,7.4,0C3.3,0,0,3.3,0,7.4c0,5.2,4.2,9.4,10.5,15.1L16,29.6
+          l5.5-6.1C27.8,16.8,32,12.6,32,7.4C32,3.3,28.7,0,24.6,0H23.6z" fill="#FF69B4"/>
+      </svg>
+    </div>
+    <div class="decor" style="top: 80px; right: 30px;">
+      <!-- Full Brown Teddy Bear SVG -->
+      <svg viewBox="0 0 64 64" width="50" height="50">
+        <!-- Body -->
+        <ellipse cx="32" cy="44" rx="16" ry="12" fill="#8B4513"/>
+        <!-- Head -->
+        <circle cx="32" cy="20" r="10" fill="#8B4513"/>
+        <!-- Ears -->
+        <circle cx="22" cy="12" r="3" fill="#8B4513"/>
+        <circle cx="42" cy="12" r="3" fill="#8B4513"/>
+        <!-- Eyes -->
+        <circle cx="28" cy="18" r="1.5" fill="#fff"/>
+        <circle cx="36" cy="18" r="1.5" fill="#fff"/>
+        <!-- Nose -->
+        <circle cx="32" cy="22" r="1.5" fill="#fff"/>
+        <!-- Smile -->
+        <path d="M29,24 Q32,27 35,24" stroke="#fff" stroke-width="1" fill="none"/>
+        <!-- Arms -->
+        <ellipse cx="16" cy="44" rx="3" ry="5" fill="#8B4513"/>
+        <ellipse cx="48" cy="44" rx="3" ry="5" fill="#8B4513"/>
+        <!-- Legs -->
+        <ellipse cx="26" cy="56" rx="3" ry="5" fill="#8B4513"/>
+        <ellipse cx="38" cy="56" rx="3" ry="5" fill="#8B4513"/>
+      </svg>
+    </div>
+    <div class="decor" style="bottom: 20px; left: 40px;">
+      <!-- Another Heart SVG -->
+      <svg viewBox="0 0 32 29.6" width="50" height="50">
+        <path d="M23.6,0c-3.3,0-6.3,1.7-8,4.3C13.7,1.7,10.7,0,7.4,0C3.3,0,0,3.3,0,7.4c0,5.2,4.2,9.4,10.5,15.1L16,29.6
+          l5.5-6.1C27.8,16.8,32,12.6,32,7.4C32,3.3,28.7,0,24.6,0H23.6z" fill="#FF69B4"/>
+      </svg>
+    </div>
+    <div class="decor" style="bottom: 60px; right: 40px;">
+      <!-- Another Full Brown Teddy Bear SVG -->
+      <svg viewBox="0 0 64 64" width="50" height="50">
+        <!-- Body -->
+        <ellipse cx="32" cy="44" rx="16" ry="12" fill="#8B4513"/>
+        <!-- Head -->
+        <circle cx="32" cy="20" r="10" fill="#8B4513"/>
+        <!-- Ears -->
+        <circle cx="22" cy="12" r="3" fill="#8B4513"/>
+        <circle cx="42" cy="12" r="3" fill="#8B4513"/>
+        <!-- Eyes -->
+        <circle cx="28" cy="18" r="1.5" fill="#fff"/>
+        <circle cx="36" cy="18" r="1.5" fill="#fff"/>
+        <!-- Nose -->
+        <circle cx="32" cy="22" r="1.5" fill="#fff"/>
+        <!-- Smile -->
+        <path d="M29,24 Q32,27 35,24" stroke="#fff" stroke-width="1" fill="none"/>
+        <!-- Arms -->
+        <ellipse cx="16" cy="44" rx="3" ry="5" fill="#8B4513"/>
+        <ellipse cx="48" cy="44" rx="3" ry="5" fill="#8B4513"/>
+        <!-- Legs -->
+        <ellipse cx="26" cy="56" rx="3" ry="5" fill="#8B4513"/>
+        <ellipse cx="38" cy="56" rx="3" ry="5" fill="#8B4513"/>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Main FLAMES Game Container -->
+  <div class="container">
+    <h1>ValentineFlame</h1>
+    <p>Enter your name and your crush's name to reveal your compatibility!</p>
+    <input type="text" id="name1" placeholder="Your Name">
+    <input type="text" id="name2" placeholder="Crush's Name">
+    <br>
+    <button onclick="playFlames()">Find Out!</button>
+    
+    <!-- Display for the Common Letters Process (kept visible after cancellation) -->
+    <div id="common-process" style="display:none;">
+      <div class="name-box">
+        <strong>Your Name:</strong>
+        <div id="name1-display"></div>
+      </div>
+      <div class="name-box">
+        <strong>Crush's Name:</strong>
+        <div id="name2-display"></div>
+      </div>
+      <div id="remaining-count"></div>
+    </div>
+    
+    <!-- FLAMES Letters Animation Display -->
+    <div id="animation"></div>
+    <!-- Final Result Text -->
+    <div class="result" id="result"></div>
+    <!-- Final Result SVG Animation Display -->
+    <div id="final-animation"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
