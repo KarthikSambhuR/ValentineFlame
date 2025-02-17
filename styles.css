@@ -5,8 +5,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
 }
+
 /* Decorations Container (SVG icons are placed here) */
 #decorations {
   position: fixed;
@@ -29,6 +29,7 @@ body {
   50% { transform: translateY(-20px) scale(1.1); }
   100% { transform: translateY(0) scale(1); }
 }
+
 /* Main Container for FLAMES Game */
 .container {
   position: relative;
@@ -74,6 +75,7 @@ body {
 .container button:hover {
   background: #d81b60;
 }
+
 /* Common Letters Process Display */
 #common-process {
   margin-top: 20px;
@@ -123,6 +125,7 @@ body {
   font-size: 1.2em;
   color: #e91e63;
 }
+
 /* FLAMES Letters Display */
 #animation {
   margin-top: 30px;
@@ -153,6 +156,7 @@ body {
   margin-top: 20px;
   color: #e91e63;
 }
+
 /* Final Result Animation (SVG icons burst upward) */
 #final-animation {
   margin-top: 20px;
@@ -186,4 +190,49 @@ body {
 .final-teddy circle.eye,
 .final-teddy circle.nose {
   fill: #fff;
+}
+
+/* ------------------------- */
+/* Mobile Responsive Styles  */
+/* ------------------------- */
+@media (max-width: 600px) {
+  .container {
+    margin: 50px auto;
+    padding: 20px;
+    max-height: 100%;
+  }
+  .container h1 {
+    font-size: 2em;
+  }
+  .container p {
+    font-size: 1em;
+  }
+  .container input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+  .container button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+  #common-process {
+    flex-direction: column;
+    align-items: center;
+  }
+  .name-box {
+    width: 90%;
+    margin: 5px 0;
+  }
+  .name-letter {
+    font-size: 1em;
+    margin: 2px;
+    padding: 5px 6px;
+  }
+  .flame-letter {
+    font-size: 1.2em;
+    padding: 10px;
+    min-width: 35px;
+    margin: 3px;
+  }
 }
